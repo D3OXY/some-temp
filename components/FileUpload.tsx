@@ -64,7 +64,7 @@ function Card({ name }: CardProps) {
             </div>
             <div className='flex flex-1'></div>
             <div className='flex flex-row justify-end'>
-                <CgMore className='w-10 h-10' />
+                <CgMore className='w-10 h-10 text-[#8799AF]' />
             </div>
         </div>
     );
