@@ -29,7 +29,7 @@ export default function Layout({ children }: LayoutProps) {
                     <FiSettings className='nav-icons' />
                 </div>
             </nav>
-            <main className="w-5/6">{children}</main>
+            <main className="w-full">{children}</main>
         </div>
     )
 }

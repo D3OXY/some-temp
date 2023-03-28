@@ -1,8 +1,9 @@
 import FileUpload from '@/components/FileUpload'
 import Layout from '@/components/Layout'
 import Head from 'next/head'
-import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
 export default function Home() {
   const [text, setText] = useState('1.1  Upload your Table with product-data')
@@ -16,8 +17,18 @@ export default function Home() {
       </Head>
       <Layout>
         <div className="p-4">
-          <h1 className="text-3xl font-bold mb-4 font-Poppins ">1. CSV</h1>
-          <p className=' text-[#B1B5B9] '>Upload and prepare your Table with Product-Information</p>
+          <div className='flex flex-row items-center p-2'>
+            <div className='flex flex-col'>
+              <h1 className="text-3xl font-bold mb-4 font-Poppins ">1. CSV</h1>
+              <p className=' text-[#B1B5B9] '>Upload and prepare your Table with Product-Information</p>
+            </div>
+            <div className='flex flex-1'></div>
+            <div className='flex'>
+              <button disabled className='flex flex-row items-center justify-center font-Inter font-semibold bg-black disabled:bg-[#E1DFE2] text-white disabled:text-[#B1B5B9] py-2 px-4 rounded' >
+                <Link href="/" className='flex flex-row items-center justify-center' >Select Columns <AiOutlineArrowRight /> </Link>
+              </button>
+            </div>
+          </div>
           <div className='p-4' >
             <h1 className='font-Inter font-semibold text-2xl'>{text}</h1>
             <FileUpload setText={setText} />
